@@ -5,9 +5,17 @@
 {% block body %}
 <link rel="stylesheet" href="{% static 'css/document.css' %}">
 
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+
+    <h1>{{ docs.0|title }} Documents</h1>
+    
+</div>
 
 <div class="docs">
-    <h1>{{ docs.0|title }} Documents</h1>
+    
     {% for doc in docs %}
     <div class="docs_list">
         <a href="/{{doc.file}}" target="_blank">{{ doc.file|rem:"static/documents/"  }}</a>        
