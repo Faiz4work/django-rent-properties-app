@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}">
+
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+    <h1 class="ph">Clients List</h1>
+
+    <div>
+        
+        <a href="#" class="btn btn-sm btn-dark">Current Clients</a>
+        <a href="{% url 'admin:index' %}" class="btn btn-sm btn-success">Add Client</a>
+    </div>
+</div>
+
+<table class="table table-striped clients_table">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Properties</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Documents</th>
+        <th>Bank Details</th>
+        <th>History</th>
+    </tr>
+</thead>
+<tbody>
+    {% for client in clients %}
+            <tr>
+                <td>{{client.name}}</td>
+                {% if client.profile_pic %}
+                <td><img src="/{{client.profile_pic}}" alt=""
+                    class="profile_pic"></td>
+                {% else %}
+                <td>None</td>
+                {% endif %}
+                
+                
+
+                <td>{{client.property.address}}</td>
+
+                <td>{{client.mobile}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.documents}}</td>
+                <td>{{client.bank_details}}</td>
+                <td>{{client.history}}</td>
+            </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}">
+
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+    <h1 class="ph">Details page</h1>
+
+    <a href="delete/" class="btn btn-sm btn-danger">Delete Property</a>
+</div>
+
+
+<div class="details">
+    <div>
+        <span class="label">Client Name: </span>
+        <span class="values">{{ obj.client.name }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Property Address: </span>
+        <span class="values">{{ obj.address }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Price: </span>
+        <span class="values">{{ obj.price }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Documents: </span>
+        <span class="values">{{ obj.documents }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">History: </span>
+        <span class="values">{{ obj.history }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Rented Since: </span>
+        <span class="values">{{ obj.rented_since }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Rented To: </span>
+        <span class="values">{{ obj.rented_to }}</span>
+    </div>
+    <hr>
+    <div>
+        <span class="label">Renewal Date: </span>
+        <span class="values">{{ obj.renewal_date }}</span>
+    </div>
+</div>
+
+
+
+{% endblock %}
+

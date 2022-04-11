@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/document.css' %}">
+
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+    <h1 class="ph">Documents</h1>
+
+    <div>
+        
+        <input type="text" id="search">
+        <label for="search" class="btn btn-sm btn-warning">Search</label>
+        <a href="{% url 'admin:index' %}" class="btn btn-sm btn-success">Add Client Doc</a>
+        <a href="{% url 'admin:index' %}" class="btn btn-sm btn-success">Add Property Doc</a>
+    </div>
+</div>
+
+<div class="two">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Client Documents</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for client in clients %}
+            <tr>
+                <td><a href="client/{{client.pk}}">{{ client.name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Property Documents</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prop in properties %}
+                <tr>
+                    <td><a href="property/{{prop.pk}}">{{ prop.address }}</a> </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<center>
+    <h1 style="margin-top: 50px;">Elena Properties</h1>
+</center>
+
+<div class="boxes">
+    <a href="{% url 'properties:prop' %}" class="box">
+        View Properties
+    </a>
+    <a href="{% url 'properties:clients' %}" class="box">
+        View Clients
+    </a>
+    <a href="#" class="box">
+        Reports
+    </a>
+    <a href="{% url 'renewal:renewal_page' %}" class="box">
+        Renewals
+    </a>
+   <a href="{% url 'document:documents' %}" class="box">
+        Documents
+   </a>
+
+</div>
+{% endblock %}
+

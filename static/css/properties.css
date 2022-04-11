@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(211, 246, 185);
+}
+
+.head{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+
+.tab{
+    display: block;
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Create properties form */
+#create_prop{
+    text-align: center;
+    margin: 30px auto;
+    background-color: white;
+    padding: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#create_prop > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+
+/* details page */
+.details{
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+}
+.label{
+    text-decoration: underline;
+}
+.values{
+    font-weight: bold;
+    color: red;
+    margin-left: 20px;
+}
+
+
+/* Clients page */
+
+.profile_pic{
+    width:100px;
+    height: 100px;
+}
+
+.clients_table{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+

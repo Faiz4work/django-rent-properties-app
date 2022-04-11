@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/properties.css' %}">
+
+<form action="." method="post" id="create_prop">
+
+    <h1 class="mb-5">Create Property</h1>
+
+    {% csrf_token %}
+
+    <div>
+        <label for="address">Address:</label>
+        <input type="text" name="address" id="address">
+    </div>
+    <div>
+        <label for="client">Client:</label>
+        <input type="text" name="client" id="client">
+    </div>
+    <div>
+        <label for="price">Price:</label>
+        <input type="number" name="price" id="price">
+    </div>
+    <div>
+        <label for="documents">Documents:</label>
+        <input type="text" name="documents" id="documents">
+    </div>
+    <div>
+        <label for="history">History:</label>
+        <input type="text" name="history" id="history">
+    </div>
+    <div>
+        <label for="expense">Expense:</label>
+        <input type="text" name="expense" id="expense">
+    </div>
+    <div>
+        <label for="rented_since">Rented Since:</label>
+        <input type="date" name="rented_since" id="rented_since">
+    </div>
+    <div>
+        <label for="rented_to">Rented to:</label>
+        <input type="date" name="rented_to" id="rented_to">
+    </div>
+    <div>
+        <label for="renewal_date">Renewal Date:</label>
+        <input type="date" name="renewal_date" id="renewal_date">
+    </div>
+
+    <input type="submit" value="Add Property" class="btn btn-block btn-info"
+    style="margin: 60px auto;">
+
+</form>
+
+
+
+{% endblock %}

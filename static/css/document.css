@@ -1,0 +1,42 @@
+.two{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 20px auto;
+    width: 80%;
+    align-items: baseline;
+}
+.two > table{
+    margin: 20px;
+}
+.head{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+/* doc_file.html / documents list */
+.docs{
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.docs > h1{
+    text-align: center;
+}
+.docs_list{
+    margin: auto;
+    padding: 10px;
+    border: 1px solid red;
+    width: 500px;
+    height: auto;
+    
+}
+
+
+

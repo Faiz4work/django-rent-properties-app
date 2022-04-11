@@ -1,0 +1,37 @@
+
+
+Script dashboard
+http://apps.houzzu.com:5000/
+
+First You need to implement SSL correctly for the script dashboard
+
+then run,you see buttons such as pause restart,are not working on the dashboard.
+
+You need to a do very thorough detailed complete functionality checkup from A to Z
+then accurately correctly fix each and any glitch that stops any functionality according to word document manual attached.
+
+Here is the current input data already entered into dashboard
+http://apps.houzzu.com:5000/ (which only open on Chrome on my end due to lack of SSL which required fixing in the script)
+
+1) Name
+Amazon WorkMail 2 | Stephanie@emails.houzzu.com
+
+port:
+2525
+
+2) Host name
+smtp.mail.us-east-1.awsapps.com
+
+3) From email
+Stephanie@emails.houzzu.com
+
+4) Gmail ID list
+yr657grqwwbdf
+
+5) Non Gmail
+zw062x2bw5404
+MailWizz
+MailWizz 
+
+mobibeasts@gmail.com
+6qyDApM6XmoXp2EugNU7
