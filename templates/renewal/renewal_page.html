@@ -5,6 +5,39 @@
 <link rel="stylesheet" href="{% static 'css/renewal.css' %}">
 
 
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+
+    <h2>Properties that are close to renewal date</h2>
+    
+</div>
+
+
+<table class="table table-hover" id="renewal_table">
+    <thead>
+        <tr>
+            <th>Property Addresss</th>
+            <th>Property's client name</th>
+            <th>Property's client email</th>
+            <th>Renewal Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for prop in props %}
+        <tr>
+            <td><a href="/properties/{{prop.pk}}">{{ prop.address }}</a></td>
+            <td>{{ prop.client.name }}</td>
+            <td>{{ prop.client.email }}</td>
+            <td>{{ prop.renewal_date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
 
 
 {% endblock %}
