@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}" />
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+<div class="head">
+    <button class="btn btn-sm btn-primary"
+    onclick="history.back()">Back</button>
+
+
+    <h2>Reports Page</h2>
+    
+</div>
+
+
+
+<div class="boxes">
+    <a href="{% url 'report:profit' %}" class="box">
+        Profit
+    </a>
+
+    <a href="{% url 'report:expenses' %}" class="box">
+        Expenses
+    </a>
+    
+
+</div>
+
+{% endblock %}

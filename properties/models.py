@@ -8,10 +8,11 @@ class Property(models.Model):
     address = models.CharField(max_length=200)
     rent = models.DecimalField(max_digits=20, decimal_places=0, blank=True, null=True)
     rented_since = models.DateField()
-    rented_to = models.DateField()
     renewal_date = models.DateField()
+
+    total_expenses = models.IntegerField(blank=True, null=True)
     
-    client = models.OneToOneField("Client", on_delete=models.SET_NULL, null=True,
+    rented_to = models.OneToOneField("Client", on_delete=models.SET_NULL, null=True,
                                   blank=True)
     
     def __str__(self):

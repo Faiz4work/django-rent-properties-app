@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'properties',
     'document',
     'renewal',
+    'report',
 ]
 
 MIDDLEWARE = [

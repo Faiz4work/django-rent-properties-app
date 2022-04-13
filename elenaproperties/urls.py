@@ -27,6 +27,7 @@ urlpatterns = [
     path('properties/', include('properties.urls', namespace='properties')),
     path('document/', include('document.urls', namespace='document')),
     path('renewal/', include('renewal.urls', namespace='renewal')),
+    path('report/', include('report.urls', namespace='report')),
 ]
 
 if settings.DEBUG:
