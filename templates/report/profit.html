@@ -5,14 +5,34 @@
 <link rel="stylesheet" href="{% static 'css/report.css' %}" />
 
 <div class="head">
-    <button class="btn btn-sm btn-primary"
+    <button class="btn btn-primary"
     onclick="history.back()">Back</button>
 
-
-    <h2>Reports Page</h2>
+    <h2>Properties Profit</h2>
     
+    <a href="{% url 'admin:index' %}" class="btn btn-success">Admin</a>    
 </div>
 
+<table class="table table-sm table-hover expense_table">
+    <thead>
+        <tr>
+            <td>Property</td>
+            <td>Gross Profit</td>
+            <td>Total Expense</td>
+            <td>Net Profit</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prop in Profit  %}
+            <tr>
+                <td>{{ prop.Property }}</td>
+                <td>{{ prop.Gross_profit|floatformat:2 }}</td>
+                <td>{{ prop.total_expense }}</td>
+                <td>{{ prop.Net_profit|floatformat:2 }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
 
+</table>
 
 {% endblock %}

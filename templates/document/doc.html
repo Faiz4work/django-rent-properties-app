@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/document.css' %}">
 
 <div class="head">
-    <button class="btn btn-sm btn-primary"
+    <button class="btn  btn-primary"
     onclick="history.back()">Back</button>
 
     <h1 class="ph">Documents</h1>
@@ -14,8 +14,8 @@
         
         <input type="text" id="search">
         <label for="search" class="btn btn-sm btn-warning">Search</label>
-        <a href="{% url 'admin:index' %}" class="btn btn-sm btn-success">Add Client Doc</a>
-        <a href="{% url 'admin:index' %}" class="btn btn-sm btn-success">Add Property Doc</a>
+        <a href="{% url 'admin:index' %}" class="btn btn-success">Add Client Doc</a>
+        <a href="{% url 'admin:index' %}" class="btn btn-success">Add Property Doc</a>
     </div>
 </div>
 

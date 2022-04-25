@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}" />
+
+<div class="head">
+    <button class="btn btn-primary"
+    onclick="history.back()">Back</button>
+
+    <h2>{{ total_expenses.0.attached_property }}</h2>
+    
+    <a href="{% url 'admin:index' %}" class="btn btn-success">Admin</a>    
+</div>
+
+<table class="table table-sm table-hover expense_table">
+    <thead>
+        <tr>
+            <th>Expense Type</th>
+            <th>Expense Amount</th>
+            <th>Expense Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for expense in expense_list %}
+            <tr>
+                <td>{{ expense.expense_type }}</td>
+                <td>{{ expense.amount }}</td>
+                <td>{{ expense.expense_date }}</td>
+            </tr>
+        {% endfor %}
+        <tr class="bg-primary text-white">
+            <td>Total Expense</td>
+            <td colspan="2">{{ t_expense }}</td>
+        </tr>
+        
+    </tbody>
+
+</table>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}" />
+
+<div class="head">
+    <button class="btn btn-primary"
+    onclick="window.location.href='/report/expenses/'">Back</button>
+
+    <h2>Add Expense</h2>
+
+    <a href="{% url 'admin:index' %}" class="btn btn-danger">Admin</a>    
+</div>
+
+<form action="." method="POST" class="expense_form">
+
+    {% csrf_token %}
+    {% if message %}
+        <p class="text-danger">Expense has been added!<p/>
+    {% endif %}
+
+    {% for field in form  %}
+
+    <div>
+        {{ field.label }}: <br>
+        {{ field }}    
+    </div>
+
+    {% endfor %}
+    
+
+<input type="submit" value="Add" class="btn btn-success mt-4">
+
+</form>
+
+
+
+
+{% endblock %}

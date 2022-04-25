@@ -4,7 +4,8 @@ from django.db import models
 class Property(models.Model):
     
     class Meta:
-        verbose_name = "propertie"
+        verbose_name = "property"
+        verbose_name_plural = "property"
     address = models.CharField(max_length=200)
     rent = models.DecimalField(max_digits=20, decimal_places=0, blank=True, null=True)
     rented_since = models.DateField()

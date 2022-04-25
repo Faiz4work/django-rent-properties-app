@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="{% static 'css/properties.css' %}">
 
 <div class="head">
-    <button class="btn btn-sm btn-primary"
+    <button class="btn btn-primary"
     onclick="window.location.href = '/'">Back</button>
 
     <h1 class="ph">Properties Information</h1>
 
-    <a href="{% url 'admin:index' %}" class="btn btn-sm btn-info text-white">Add Property</a>
+    <a href="{% url 'admin:index' %}" class="btn btn-info text-white">Add Property</a>
 </div>
 
 
@@ -27,10 +27,10 @@
         <tbody>
             {% for prop in props %}
                 <tr>
-                    <td>{{ prop.client.name }}</td>
+                    <td>{{ prop.rented_to.name}}</td>
                     <td>{{ prop.address }}</td>
-                    <td><a href="/properties/{{prop.pk}}" class="btn btn-success btn-sm">Details</a></td>
-                    <td><a href="{{prop.pk}}/delete/" class="btn btn-sm btn-danger">Delete</a></td>
+                    <td><a href="/properties/{{prop.pk}}" class="btn btn-success">Details</a></td>
+                    <td><a href="{{prop.pk}}/delete/" class="btn btn-danger">Delete</a></td>
                 </tr>
             {% endfor %}
             

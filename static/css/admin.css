@@ -1,0 +1,10 @@
+*{
+    font-size: large;
+}
+
+label{
+    font-size: x-large !important;
+}
+
+input[type='file']{
+    transform: scale(1.2, 1.2);

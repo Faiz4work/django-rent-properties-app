@@ -5,13 +5,35 @@
 <link rel="stylesheet" href="{% static 'css/report.css' %}" />
 
 <div class="head">
-    <button class="btn btn-sm btn-primary"
-    onclick="history.back()">Back</button>
+    <button class="btn btn-primary"
+    onclick="window.location.href='/report/'">Back</button>
 
+    <h2>Properties Expenses</h2>
 
-    <h2>Reports Page</h2>
-    
+    <a href="{% url 'report:add_expense' %}" class="btn btn-danger">Add Expense</a>    
 </div>
+
+<table class="table table-sm table-hover expense_table">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Total Expense</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for prop in props %}
+            <tr>
+                <td>{{ prop.address }}</td>
+                <td>{{ prop.total_expenses }}</td>
+                <td><a href="/report/expense_details/{{prop.pk}}"
+                    class="btn btn-sm btn-success">Expense Details<a/></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
 
 
 
